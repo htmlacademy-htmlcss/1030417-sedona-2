@@ -2,7 +2,7 @@
 
 * Студент: [Константин Гончарук](https://up.htmlacademy.ru/htmlcss-individual/2/user/1030417).
 * Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
-
+* Сайт : [Мой проект Седона](https://konstantin-cpu.github.io/1030417-sedona-2/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
