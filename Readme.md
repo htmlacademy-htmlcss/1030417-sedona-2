@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Константин Гончарук](https://up.htmlacademy.ru/htmlcss-individual/2/user/1030417).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
