@@ -21,6 +21,13 @@ body {
   font-style: normal;
   font-display: swap;
   margin: 0;
+  background-color: #F2F2F2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .visually-hidden {
@@ -51,6 +58,12 @@ body {
   margin: 0;
 }
 
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
 .header__link {
   font-size: 20px;
   line-height: 24px;
@@ -78,6 +91,7 @@ body {
   background-size: 100% auto;
   background-color: #82B3D3;
   position: relative;
+  text-align: center;
 }
 
 .welcome::after {
@@ -101,6 +115,10 @@ body {
   line-height: 36px;
 }
 
+.advantages {
+  text-align: center;
+}
+
 .advantages__advantage {
   background-color: #82B3D3;
   color: black;
@@ -117,6 +135,12 @@ body {
 .advantages__advantage:first-child,
 .advantages__advantage:last-child {
   color: white;
+}
+
+.services,
+.subscription,
+.search {
+  text-align: center;
 }
 
 .services__header {
