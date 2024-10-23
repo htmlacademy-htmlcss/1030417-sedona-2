@@ -1,17 +1,19 @@
 @font-face {
-  font-family: "PT Sans", sans-serif;
-  src: url(../fonts/ptsans-400.woff2);
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-400.woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
-  font-family: "PT Sans", sans-serif;
-  src: url(../fonts/ptsans-700.woff2);
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-700.woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+}
+
+html {
+  height: 100vh;
 }
 
 body {
@@ -21,7 +23,7 @@ body {
   font-style: normal;
   font-display: swap;
   margin: 0;
-  background-color: #F2F2F2;
+  height: inherit;
 }
 
 img {
@@ -59,9 +61,39 @@ img {
 }
 
 .page-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header__navigation {
+  padding: 14px 70px 14px 255px;
+  display: flex;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  z-index: 1;
+}
+
+.header__navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+.header__navigation-item:not(:last-child) {
+  margin-right: 32px;
 }
 
 .header__link {
@@ -84,26 +116,46 @@ img {
   font-weight: 700;
   color: white;
   background-color: #756157;
+  display: block;
+  padding: 8px 0;
+  width: 160px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .welcome {
   background: url("../images/index-background.jpg") no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: #82B3D3;
+  background-position: center;
   position: relative;
   text-align: center;
+  padding: 50px 0 82px;
 }
 
 .welcome::after {
   content: "";
   position: absolute;
-  right: 0;
-  bottom: 0;
+  left: 0;
+  bottom: -1px;
   width: 100%;
   height: 57px;
   background-image: url("../images/divider.svg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.welcome__container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .advantages__caption,
@@ -113,28 +165,74 @@ img {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
 .advantages {
   text-align: center;
+  padding-top: 65px;
+}
+
+.advantages img {
+  display: block;
+  flex-grow: 1;
+}
+
+.advantages__header {
+  text-transform: uppercase;
+  margin: 0 auto 62px;
+  width: 183px;
+}
+
+.advantages__caption {
+  width: 625px;
+  margin: 0 auto 25px;
+}
+
+.advantages__text {
+  margin-bottom: 90px;
+}
+
+.advantages__list {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages__advantage {
   background-color: #82B3D3;
   color: black;
+  display: flex;
+  min-height: 385px;
+  box-sizing: border-box;
+  width: 400px;
+  flex-grow: 1;
 }
 
-.advantages__advantage:nth-child(2n) {
+.advantages__container {
+  text-align: center;
+  padding: 112px 80px 0;
+}
+
+.advantages__advantage:nth-child(even) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages__advantage:nth-child(3n) {
+.advantages__advantage:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages__advantage:first-child,
 .advantages__advantage:last-child {
+  background-color: #82B3D3;
   color: white;
+  width: auto;
+}
+
+.advantages__description {
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .services,
@@ -143,10 +241,39 @@ img {
   text-align: center;
 }
 
+.services {
+  padding-top: 65px;
+}
+
+.services__caption {
+  width: 505px;
+  margin: 0 auto 20px;
+}
+
+.services__text {
+  margin-bottom: 65px;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.services__item {
+  width: 400px;
+  min-height: 385px;
+  box-sizing: border-box;
+  padding: 180px 85px 0;
+}
+
 .services__header {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .services__description {
@@ -158,19 +285,60 @@ img {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.search {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 95px;
+}
+
+.search__caption {
+  margin-bottom: 20px;
+}
+
+.search__text {
+  width: 600px;
+  margin: 0 auto 52px;
+}
+
 .search__link {
   text-transform: uppercase;
   font-size: 20px;
   line-height: 36px;
   color: white;
   background-color: #756157;
+  border-radius: 4px;
+  display: block;
+  width: 376px;
+  box-sizing: border-box;
+  padding: 8px 20px;
+  font-weight: 700;
+  margin: 0 auto 96px;
 }
 
 .subscription {
-  background: url("../images/Subscribe-background.jpg") no-repeat;
+  background: url("../images/subscribe-background.jpg") no-repeat;
   background-size: 100% auto;
   background-position: center;
   background-color: #82B3D3;
+}
+
+.subscription__container {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 96px;
+}
+
+.subscription__caption {
+  margin-bottom: 20px;
+}
+
+.subscription__text {
+  width: 475px;
+  margin-bottom: 55px;
 }
 
 .subscription p {
@@ -183,10 +351,33 @@ img {
 }
 
 .subscription__submit-button {
+  width: 232px;
   font-size: 20px;
   line-height: 36px;
   color: white;
   background-color: #82B3D3;
+  text-transform: uppercase;
+  border: 0;
+  font-weight: 700;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.subscription__form-container {
+  display: flex;
+  margin-bottom: 104px;
+}
+
+.subscription__input {
+  width: 452px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  line-height: 24px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .contacts__social {
@@ -194,6 +385,23 @@ img {
   display: inline-block;
   min-height: 17px;
   min-width: 24px;
+}
+
+.contacts__container {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 40px 20px 30px 30px;
+  justify-content: space-between;
+}
+
+.contacts__socials-list {
+  display: flex;
+}
+
+.contacts__socials-item:not(:last-child) {
+  margin-right: 25px;
 }
 
 .contacts__social--vk {
