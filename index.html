@@ -137,7 +137,7 @@
             <p class="subscription__caption paragraph">Подпишитесь на рассылку</p>
             <p class="subscription__text paragraph">Только полезная информация и никакого спама, честное бойскаутское!
             </p>
-            <form class="subscription__form">
+            <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
               <div class="subscription__form-container">
                 <input class="subscription__input" type="email" name="email" placeholder="Ваш e-mail" required>
                 <button class="subscription__submit-button blue-button" type="submit">Подписаться</button>
@@ -182,21 +182,21 @@
 
     <!-- Для модального окна добавить класс modal--opened -->
 
-    <div class="modal">
+    <div class="modal modal--closed">
       <div class="modal__container">
-        <button class="modal__toggle">
+        <button class="modal__button" type="button">
           <span class="visually-hidden">Окрыть/закрыть</span>
         </button>
         <h2 class="modal__header header">Поиск гостиницы в Седоне</h2>
-        <form action="#" method="post" class="modal__form">
+        <form action="https://echo.htmlacademy.ru" method="post" class="modal__form">
           <div class="modal__fieldset">
             <label class="modal__label" for="date-in">Дата Заезда:</label>
-            <input type="text" id="date-in" class="modal__date" placeholder="27 апреля 2020" name="modal__date-in" required>
+            <input type="text" id="date-in" class="modal__date" value="27 апреля 2020" name="modal__date-in" required>
             <span class="modal__date-message modal__date-message--red">Мы не можем отправить вас в прошлое.</span>
           </div>
           <div class="modal__fieldset">
             <label class="modal__label" for="date-out">Дата Выезда:</label>
-            <input type="text" id="date-out" class="modal__date" name="modal__date-out" placeholder="1 сентября 2023" required>
+            <input type="text" id="date-out" class="modal__date" name="modal__date-out" value="1 сентября 2023" required>
             <span class="modal__date-message">На эти даты есть свободные номера. Пока есть.</span>
           </div>
           <div class="modal__counters-fieldset">
@@ -248,5 +248,6 @@
         </form>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
