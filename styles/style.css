@@ -58,6 +58,10 @@ img {
   outline: 0;
 }
 
+.link:active {
+  opacity: 0.3;
+}
+
 .paragraph {
   margin: 0;
 }
@@ -134,6 +138,7 @@ img {
   height: 2px;
   background-color: #756257;
   z-index: 1;
+  opacity: 1;
 }
 
 .header__user-container {
@@ -734,24 +739,19 @@ img {
   position: relative;
 }
 
-.filters__price-item::after {
+.filters__price-limit {
   position: absolute;
   top: 12px;
   right: 20px;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-transform: lowercase;
 }
 
-.filters__price-item--min::after {
-  content: "от";
-}
-
-.filters__price-item--max::after {
-  content: "до";
-}
-
-.filters__price-input:hover {
+.filters__price-input:hover,
+.filters__price-limit:hover + .filters__price-input {
   background-color: #e6e6e6;
   cursor: pointer;
 }
